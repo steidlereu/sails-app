@@ -1,0 +1,83 @@
+<div id="add-product" v-cloak>
+  <div class="container pt-5 pb-5">
+      <h1>Produkt anlegen</h1>
+      <hr/>
+      <ajax-form action="addProduct" :syncing.sync="syncing" :cloud-error.sync="cloudError" :form-data="formData" :form-rules="formRules" :form-errors.sync="formErrors" @submitted="submittedForm()">
+          <div class="row">
+              <div class="col-sm-6">
+                  <div class="form-group">
+                      <label for="itemName">Artikelname</label>
+                      <input class="form-control" id="itemName" name="itemName" type="text"  :class="[formErrors.itemName ? 'is-invalid' : '']" v-model.trim="formData.itemName" focus-first>
+                      <div class="invalid-feedback" v-if="formErrors.itemName">Bitte Artikelname angeben.</div>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="form-group">
+                      <label for="itemDescription">Artikelbeschreibung</label>
+                      <input class="form-control" id="itemDescription" name="itemDescription" type="text"  :class="[formErrors.itemDescription ? 'is-invalid' : '']" v-model.trim="formData.itemDescription">
+                      <div class="invalid-feedback" v-if="formErrors.itemDescription">Bitte Artikelbeschreibung angeben.</div>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="form-group">
+                      <label for="itemNumber">Artikelnummer</label>
+                      <input class="form-control" id="itemNumber" name="itemNumber" type="text"  :class="[formErrors.itemNumber ? 'is-invalid' : '']" v-model.trim="formData.itemNumber">
+                      <div class="invalid-feedback" v-if="formErrors.itemNumber">Bitte Artikelnummer angeben.</div>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="form-group">
+                      <label for="manufacturer">Hersteller</label>
+                      <input class="form-control" id="manufacturer" name="manufacturer" type="text"  :class="[formErrors.manufacturer ? 'is-invalid' : '']" v-model.trim="formData.manufacturer">
+                      <div class="invalid-feedback" v-if="formErrors.manufacturer">Bitte Hersteller angeben.</div>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="form-group">
+                      <label for="caliber">Kaliber</label>
+                      <select class="form-control" id="caliber" name="caliber" :class="[formErrors.caliber ? 'is-invalid' : '']" v-model.trim="formData.caliber">
+                          <% for(var i = 0; i < sails.config.custom.calibers.length; i++) { %>
+                              <option><%= sails.config.custom.calibers[i] %></option>
+                          <% } %>
+                      </select>
+                      <div class="invalid-feedback" v-if="formErrors.caliber">Bitte Kaliber angeben.</div>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="form-group">
+                      <label for="type">Typ</label>
+                      <select class="form-control" id="type" name="type" :class="[formErrors.type ? 'is-invalid' : '']" v-model.trim="formData.type">
+                          <% for(var i = 0; i < sails.config.custom.weaponTypes.length; i++) { %>
+                              <option><%= sails.config.custom.weaponTypes[i] %></option>
+                          <% } %>
+                      </select>
+                      <div class="invalid-feedback" v-if="formErrors.caliber">Bitte Typ angeben.</div>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="form-group">
+                      <label for="stockdate">Im Bestand seit</label>
+                      <input class="form-control" id="stockdate" name="stockdate" type="date"  :class="[formErrors.stockdate ? 'is-invalid' : '']" v-model.trim="formData.stockdate">
+                      <div class="invalid-feedback" v-if="formErrors.stockdate">Bitte Bestandsdatum angeben.</div>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="form-group">
+                      <label for="maxShots">Max. Schussleistung</label>
+                      <input class="form-control" id="maxShots" name="maxShots" type="number"  :class="[formErrors.maxShots ? 'is-invalid' : '']" v-model.trim="formData.maxShots">
+                      <div class="invalid-feedback" v-if="formErrors.maxShots">Bitte Max. Schussleistung angeben.</div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-6">
+                  <div class="form-group text-right">
+                      <a class="btn btn-outline-danger" href="/">abbrechen</a>
+                      <ajax-button type="submit" :syncing="syncing" class="btn btn-outline-primary">anlegen</ajax-button>
+                  </div>
+              </div>
+          </div>
+      </ajax-form>
+  </div>
+</div>
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

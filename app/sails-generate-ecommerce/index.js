@@ -77,7 +77,7 @@ module.exports = {
     // • e.g. create a folder:
     // ```
     './api/models/ecommerce': { folder: {} },
-    './api/models/ecommerce/Product.js': { folder: {} }
+    './api/models/ecommerce/Product.js': { template: 'api/models/ecommerce/Product.js' }
 
     
     // ```
