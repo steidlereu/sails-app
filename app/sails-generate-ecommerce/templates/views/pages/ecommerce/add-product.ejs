@@ -133,6 +133,20 @@
                         <div class="invalid-feedback" v-if="formErrors.tax"><%= __('Please enter Tax.') %></div>
                     </div>
                 </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="taxCategory"><%= __('Tax Category') %></label>
+                        <select class="form-control" id="taxCategory" name="taxCategory"
+                            :class="[formErrors.taxCategory ? 'is-invalid' : '']" v-model.trim="formData.taxCategory">
+                            <% for(var i=0; i < sails.config.custom.taxCategories.length; i++) { %>
+                                <option>
+                                    <%= sails.config.custom.taxCategories[i] %>
+                                </option>
+                                <% } %>
+                        </select>
+                        <div class="invalid-feedback" v-if="formErrors.taxCategory"><%= __('Please enter Tax Category.') %></div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
