@@ -147,6 +147,14 @@
                         <div class="invalid-feedback" v-if="formErrors.taxCategory"><%= __('Please enter Tax Category.') %></div>
                     </div>
                 </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="isbn"><%= __('Isbn') %></label>
+                        <input class="form-control" id="isbn" name="isbn" type="number"
+                            :class="[formErrors.isbn ? 'is-invalid' : '']" v-model.trim="formData.isbn">
+                        <div class="invalid-feedback" v-if="formErrors.isbn"><%= __('Please enter Isbn.') %></div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
