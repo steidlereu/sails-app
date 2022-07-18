@@ -65,6 +65,26 @@ module.exports = {
     return done();
   },
 
+  after: function (scope, done){
+    console.log();
+    console.log('Successfully generated:');
+    console.log();
+    console.log('A few reminders:');
+    console.log(' (1)  These files were generated assuming your Sails app is using');
+    console.log('      Vue.js as its front-end framework.  (If you\'re unsure,');
+    console.log('      head over to https://sailsjs.com/support)');
+    console.log();
+    console.log(' (2)  You\'ll need to manually add a route for this new page\'s');
+    console.log('      action in your `config/routes.js` file; e.g.');
+    console.log();
+    console.log(' (3)  You\'ll need to manually import the new LESS stylesheet');
+    console.log('      from your `assets/styles/importer.less` file; e.g.');
+    console.log();
+    console.log(' (4)  Last but not least, since some of the above are backend changes,');
+    console.log('      don\'t forget to re-lift the server before testing!');
+    console.log();
+    return done();
+  },
 
 
   /**
@@ -106,6 +126,11 @@ module.exports = {
     './views/pages/ecommerce/add-product.ejs': { template: 'views/pages/ecommerce/add-product.ejs' },
     './views/pages/ecommerce/details-product.ejs': { template: 'views/pages/ecommerce/details-product.ejs' },
     './views/pages/ecommerce/list-product.ejs': { template: 'views/pages/ecommerce/list-product.ejs' },
+
+    // Since we cant use the template builtin for this (due to conflicts
+    // with the template used by the .ejs file itself), we just do it
+    // inline instead:
+
     
     // ```
     //
