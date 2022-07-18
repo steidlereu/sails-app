@@ -80,7 +80,10 @@ module.exports = {
     console.log(' (3)  You\'ll need to manually import the new LESS stylesheet');
     console.log('      from your `assets/styles/importer.less` file; e.g.');
     console.log();
-    console.log(' (4)  Last but not least, since some of the above are backend changes,');
+    console.log(' (4)  You\'ll need to manually rename the new *.ejs views');
+    console.log('      from your `/views/pages/*.html` files to `/views/pages/*.ejs`; e.g.');
+    console.log();
+    console.log(' (5)  Last but not least, since some of the above are backend changes,');
     console.log('      don\'t forget to re-lift the server before testing!');
     console.log();
     return done();
@@ -123,9 +126,9 @@ module.exports = {
 
     './views/pages/ecommerce': { folder: {} },
 
-    './views/pages/ecommerce/add-product.ejs': { template: 'views/pages/ecommerce/add-product.ejs' },
-    './views/pages/ecommerce/details-product.ejs': { template: 'views/pages/ecommerce/details-product.ejs' },
-    './views/pages/ecommerce/list-product.ejs': { template: 'views/pages/ecommerce/list-product.ejs' },
+    './views/pages/ecommerce/add-product.html': { template: 'views/pages/ecommerce/add-product.html' },
+    './views/pages/ecommerce/details-product.html': { template: 'views/pages/ecommerce/details-product.html' },
+    './views/pages/ecommerce/list-product.html': { template: 'views/pages/ecommerce/list-product.html' },
 
     // Since we cant use the template builtin for this (due to conflicts
     // with the template used by the .ejs file itself), we just do it
