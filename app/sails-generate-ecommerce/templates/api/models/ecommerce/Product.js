@@ -45,7 +45,7 @@
   
       unit: {
         type: 'string',
-        isIn: sails.config.custom.units,
+        isIn: sails.config.ecommerce.units,
         maxLength: 255,
         required: true,
       },
@@ -57,21 +57,21 @@
   
       category: {
         type: 'string',
-        isIn: sails.config.custom.categories,
+        isIn: sails.config.ecommerce.categories,
         maxLength: 255,
         required: true,
       },
   
       restriction: {
         type: 'string',
-        isIn: sails.config.custom.restrictions,
+        isIn: sails.config.ecommerce.restrictions,
         maxLength: 255,
         required: true,
       },
   
       ageRestriction: {
         type: 'string',
-        isIn: sails.config.custom.ageRestrictions,
+        isIn: sails.config.ecommerce.ageRestrictions,
         maxLength: 255,
         required: true,
       },
@@ -83,7 +83,7 @@
   
       currency: {
         type: 'string',
-        isIn: sails.config.custom.currencies,
+        isIn: sails.config.ecommerce.currencies,
         maxLength: 255,
         required: true,
       },
@@ -95,7 +95,7 @@
   
       taxCategory: {
         type: 'string',
-        isIn: sails.config.custom.taxCategories,
+        isIn: sails.config.ecommerce.taxCategories,
         maxLength: 255,
         required: true,
       },

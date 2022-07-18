@@ -1,214 +1,302 @@
 <div id="add-product" v-cloak>
     <div class="container pt-5 pb-5">
-        <h1><%= __('Create Product') %></h1>
+        <h1>
+            <%= __('Create Product') %>
+        </h1>
         <hr />
         <ajax-form action="addProduct" :syncing.sync="syncing" :cloud-error.sync="cloudError" :form-data="formData"
             :form-rules="formRules" :form-errors.sync="formErrors" @submitted="submittedForm()">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="itemName"><%= __('Item Name') %></label>
+                        <label for="itemName">
+                            <%= __('Item Name') %>
+                        </label>
                         <input class="form-control" id="itemName" name="itemName" type="text"
                             :class="[formErrors.itemName ? 'is-invalid' : '']" v-model.trim="formData.itemName"
                             focus-first>
-                        <div class="invalid-feedback" v-if="formErrors.itemName"><%= __('Please enter Item Name.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.itemName">
+                            <%= __('Please enter Item Name.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="itemDescription"><%= __('Item Description') %></label>
+                        <label for="itemDescription">
+                            <%= __('Item Description') %>
+                        </label>
                         <input class="form-control" id="itemDescription" name="itemDescription" type="text"
                             :class="[formErrors.itemDescription ? 'is-invalid' : '']"
                             v-model.trim="formData.itemDescription">
-                        <div class="invalid-feedback" v-if="formErrors.itemDescription"><%= __('Please enter Item Description.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.itemDescription">
+                            <%= __('Please enter Item Description.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="itemNumber"><%= __('Item Number') %></label>
+                        <label for="itemNumber">
+                            <%= __('Item Number') %>
+                        </label>
                         <input class="form-control" id="itemNumber" name="itemNumber" type="text"
                             :class="[formErrors.itemNumber ? 'is-invalid' : '']" v-model.trim="formData.itemNumber">
-                        <div class="invalid-feedback" v-if="formErrors.itemNumber"><%= __('Please enter Item Number.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.itemNumber">
+                            <%= __('Please enter Item Number.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="manufacturer"><%= __('Manufacturer') %></label>
+                        <label for="manufacturer">
+                            <%= __('Manufacturer') %>
+                        </label>
                         <input class="form-control" id="manufacturer" name="manufacturer" type="text"
                             :class="[formErrors.manufacturer ? 'is-invalid' : '']" v-model.trim="formData.manufacturer">
-                        <div class="invalid-feedback" v-if="formErrors.manufacturer"><%= __('Please enter Manufacturer.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.manufacturer">
+                            <%= __('Please enter Manufacturer.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="unit"><%= __('Unit') %></label>
+                        <label for="unit">
+                            <%= __('Unit') %>
+                        </label>
                         <select class="form-control" id="unit" name="unit"
                             :class="[formErrors.unit ? 'is-invalid' : '']" v-model.trim="formData.unit">
-                            <% for(var i=0; i < sails.config.custom.units.length; i++) { %>
+                            <% for(var i=0; i < sails.config.ecommerce.units.length; i++) { %>
                                 <option>
-                                    <%= sails.config.custom.units[i] %>
+                                    <%= sails.config.ecommerce.units[i] %>
                                 </option>
                                 <% } %>
                         </select>
-                        <div class="invalid-feedback" v-if="formErrors.unit"><%= __('Please enter Unit.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.unit">
+                            <%= __('Please enter Unit.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="packageSize"><%= __('Package Size') %></label>
+                        <label for="packageSize">
+                            <%= __('Package Size') %>
+                        </label>
                         <input class="form-control" id="packageSize" name="packageSize" type="number"
                             :class="[formErrors.packageSize ? 'is-invalid' : '']" v-model.trim="formData.packageSize">
-                        <div class="invalid-feedback" v-if="formErrors.packageSize"><%= __('Please enter Package Size.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.packageSize">
+                            <%= __('Please enter Package Size.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="category"><%= __('Category') %></label>
+                        <label for="category">
+                            <%= __('Category') %>
+                        </label>
                         <select class="form-control" id="category" name="category"
                             :class="[formErrors.category ? 'is-invalid' : '']" v-model.trim="formData.category">
-                            <% for(var i=0; i < sails.config.custom.category.length; i++) { %>
+                            <% for(var i=0; i < sails.config.ecommerce.category.length; i++) { %>
                                 <option>
-                                    <%= sails.config.custom.category[i] %>
+                                    <%= sails.config.ecommerce.category[i] %>
                                 </option>
                                 <% } %>
                         </select>
-                        <div class="invalid-feedback" v-if="formErrors.category"><%= __('Please enter Category.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.category">
+                            <%= __('Please enter Category.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="restriction"><%= __('Restriction') %></label>
+                        <label for="restriction">
+                            <%= __('Restriction') %>
+                        </label>
                         <select class="form-control" id="restriction" name="restriction"
                             :class="[formErrors.restriction ? 'is-invalid' : '']" v-model.trim="formData.restriction">
-                            <% for(var i=0; i < sails.config.custom.restrictions.length; i++) { %>
+                            <% for(var i=0; i < sails.config.ecommerce.restrictions.length; i++) { %>
                                 <option>
-                                    <%= sails.config.custom.restrictions[i] %>
+                                    <%= sails.config.ecommerce.restrictions[i] %>
                                 </option>
                                 <% } %>
                         </select>
-                        <div class="invalid-feedback" v-if="formErrors.restriction"><%= __('Please enter Restriction.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.restriction">
+                            <%= __('Please enter Restriction.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="ageRestriction"><%= __('Age Restriction') %></label>
+                        <label for="ageRestriction">
+                            <%= __('Age Restriction') %>
+                        </label>
                         <select class="form-control" id="ageRestriction" name="ageRestriction"
-                            :class="[formErrors.ageRestriction ? 'is-invalid' : '']" v-model.trim="formData.ageRestriction">
-                            <% for(var i=0; i < sails.config.custom.ageRestrictions.length; i++) { %>
+                            :class="[formErrors.ageRestriction ? 'is-invalid' : '']"
+                            v-model.trim="formData.ageRestriction">
+                            <% for(var i=0; i < sails.config.ecommerce.ageRestrictions.length; i++) { %>
                                 <option>
-                                    <%= sails.config.custom.ageRestrictions[i] %>
+                                    <%= sails.config.ecommerce.ageRestrictions[i] %>
                                 </option>
                                 <% } %>
                         </select>
-                        <div class="invalid-feedback" v-if="formErrors.ageRestriction"><%= __('Please enter Age Restriction.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.ageRestriction">
+                            <%= __('Please enter Age Restriction.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="price"><%= __('Price') %></label>
+                        <label for="price">
+                            <%= __('Price') %>
+                        </label>
                         <input class="form-control" id="price" name="price" type="number"
                             :class="[formErrors.price ? 'is-invalid' : '']" v-model.trim="formData.price">
-                        <div class="invalid-feedback" v-if="formErrors.price"><%= __('Please enter Price.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.price">
+                            <%= __('Please enter Price.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="currency"><%= __('Currency') %></label>
+                        <label for="currency">
+                            <%= __('Currency') %>
+                        </label>
                         <select class="form-control" id="currency" name="currency"
                             :class="[formErrors.currency ? 'is-invalid' : '']" v-model.trim="formData.currency">
-                            <% for(var i=0; i < sails.config.custom.currencies.length; i++) { %>
+                            <% for(var i=0; i < sails.config.ecommerce.currencies.length; i++) { %>
                                 <option>
-                                    <%= sails.config.custom.currencies[i] %>
+                                    <%= sails.config.ecommerce.currencies[i] %>
                                 </option>
                                 <% } %>
                         </select>
-                        <div class="invalid-feedback" v-if="formErrors.currency"><%= __('Please enter Currency.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.currency">
+                            <%= __('Please enter Currency.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="tax"><%= __('Tax') %></label>
+                        <label for="tax">
+                            <%= __('Tax') %>
+                        </label>
                         <input class="form-control" id="tax" name="tax" type="number"
                             :class="[formErrors.tax ? 'is-invalid' : '']" v-model.trim="formData.tax">
-                        <div class="invalid-feedback" v-if="formErrors.tax"><%= __('Please enter Tax.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.tax">
+                            <%= __('Please enter Tax.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="taxCategory"><%= __('Tax Category') %></label>
+                        <label for="taxCategory">
+                            <%= __('Tax Category') %>
+                        </label>
                         <select class="form-control" id="taxCategory" name="taxCategory"
                             :class="[formErrors.taxCategory ? 'is-invalid' : '']" v-model.trim="formData.taxCategory">
-                            <% for(var i=0; i < sails.config.custom.taxCategories.length; i++) { %>
+                            <% for(var i=0; i < sails.config.ecommerce.taxCategories.length; i++) { %>
                                 <option>
-                                    <%= sails.config.custom.taxCategories[i] %>
+                                    <%= sails.config.ecommerce.taxCategories[i] %>
                                 </option>
                                 <% } %>
                         </select>
-                        <div class="invalid-feedback" v-if="formErrors.taxCategory"><%= __('Please enter Tax Category.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.taxCategory">
+                            <%= __('Please enter Tax Category.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="isbn"><%= __('Isbn') %></label>
+                        <label for="isbn">
+                            <%= __('Isbn') %>
+                        </label>
                         <input class="form-control" id="isbn" name="isbn" type="number"
                             :class="[formErrors.isbn ? 'is-invalid' : '']" v-model.trim="formData.isbn">
-                        <div class="invalid-feedback" v-if="formErrors.isbn"><%= __('Please enter Isbn.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.isbn">
+                            <%= __('Please enter Isbn.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="upc"><%= __('UPC') %></label>
+                        <label for="upc">
+                            <%= __('UPC') %>
+                        </label>
                         <input class="form-control" id="upc" name="upc" type="number"
                             :class="[formErrors.upc ? 'is-invalid' : '']" v-model.trim="formData.upc">
-                        <div class="invalid-feedback" v-if="formErrors.upc"><%= __('Please enter UPC.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.upc">
+                            <%= __('Please enter UPC.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="ean"><%= __('EAN') %></label>
+                        <label for="ean">
+                            <%= __('EAN') %>
+                        </label>
                         <input class="form-control" id="ean" name="ean" type="number"
                             :class="[formErrors.ean ? 'is-invalid' : '']" v-model.trim="formData.ean">
-                        <div class="invalid-feedback" v-if="formErrors.ean"><%= __('Please enter EAN.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.ean">
+                            <%= __('Please enter EAN.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="gtin"><%= __('GTiN') %></label>
+                        <label for="gtin">
+                            <%= __('GTiN') %>
+                        </label>
                         <input class="form-control" id="gtin" name="gtin" type="number"
                             :class="[formErrors.gtin ? 'is-invalid' : '']" v-model.trim="formData.gtin">
-                        <div class="invalid-feedback" v-if="formErrors.gtin"><%= __('Please enter GTiN.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.gtin">
+                            <%= __('Please enter GTiN.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="productLink"><%= __('Product Link') %></label>
+                        <label for="productLink">
+                            <%= __('Product Link') %>
+                        </label>
                         <input class="form-control" id="productLink" name="productLink" type="url"
                             :class="[formErrors.productLink ? 'is-invalid' : '']" v-model.trim="formData.productLink">
-                        <div class="invalid-feedback" v-if="formErrors.productLink"><%= __('Please enter Product Link.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.productLink">
+                            <%= __('Please enter Product Link.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="productImageLink"><%= __('Product Image Link') %></label>
+                        <label for="productImageLink">
+                            <%= __('Product Image Link') %>
+                        </label>
                         <input class="form-control" id="productImageLink" name="productImageLink" type="url"
-                            :class="[formErrors.productImageLink ? 'is-invalid' : '']" v-model.trim="formData.productImageLink">
-                        <div class="invalid-feedback" v-if="formErrors.productImageLink"><%= __('Please enter Product Image Link.') %></div>
+                            :class="[formErrors.productImageLink ? 'is-invalid' : '']"
+                            v-model.trim="formData.productImageLink">
+                        <div class="invalid-feedback" v-if="formErrors.productImageLink">
+                            <%= __('Please enter Product Image Link.') %>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="note"><%= __('Note') %></label>
+                        <label for="note">
+                            <%= __('Note') %>
+                        </label>
                         <input class="form-control" id="note" name="note" type="text"
                             :class="[formErrors.note ? 'is-invalid' : '']" v-model.trim="formData.note">
-                        <div class="invalid-feedback" v-if="formErrors.note"><%= __('Please enter Note.') %></div>
+                        <div class="invalid-feedback" v-if="formErrors.note">
+                            <%= __('Please enter Note.') %>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group text-right">
-                        <a class="btn btn-outline-danger" href="/"><%= __('cancel') %></a>
-                        <ajax-button type="submit" :syncing="syncing" class="btn btn-outline-primary"><%= __('create') %></ajax-button>
+                        <a class="btn btn-outline-danger" href="/">
+                            <%= __('cancel') %>
+                        </a>
+                        <ajax-button type="submit" :syncing="syncing" class="btn btn-outline-primary">
+                            <%= __('create') %>
+                        </ajax-button>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,81 @@
 <div id="list-product" v-cloak>
-
-  <h1>TODO: Implement this page.</h1>
-  <p>(See also <em>assets/styles/pages/ecommerce/list-product.less</em>, <em>assets/js/pages/ecommerce/list-product.page.js</em>, and <em>api/controllers/ecommerce/view-list-product.js</em>.)</p>
-
+    <div class="container pt-5 pb-5">
+        <h1>
+            <%= __('Products') %>
+        </h1>
+        <hr />
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <%= __('ID') %>
+                    </th>
+                    <th scope="col">
+                        <%= __('Item Name') %>
+                    </th>
+                    <th scope="col">
+                        <%= __('Item Number') %>
+                    </th>
+                    <th scope="col">
+                        <%= __('Manufacturer') %>
+                    </th>
+                    <th scope="col">
+                        <%= __('Price') %>
+                    </th>
+                    <th scope="col">
+                        <%= __('Tax') %>
+                    </th>
+                    <th scope="col">
+                        <%= __('tax Category') %>
+                    </th>
+                    <th scope="col">
+                        <%= __('Total Price') %>
+                    </th>
+                    <th scope="col">
+                        <%= __('Currency') %>
+                    </th>
+                    <th scope="col">
+                        <%= __('Actions') %>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (products.length) { %>
+                    <% products.forEach(function(product){ %>
+                        <tr>
+                            <td>
+                                <%= product.id %>
+                            </td>
+                            <td>
+                                <%= product.itemName %>
+                            </td>
+                            <td>
+                                <%= product.itemNumber %>
+                            </td>
+                            <td>
+                                <%= product.manufacturer %>
+                            </td>
+                            <td>
+                                <%= product.price %>
+                            </td>
+                            <td>
+                                <%= product.tax %>
+                            </td>
+                            <td>
+                                <%= product.taxCategory %>
+                            </td>
+                            <td>{{ calculatePrice(<%= (product.price) %>, <%= product.tax %>) }}</td>
+                            <td>
+                                <%= product.currency %>
+                            </td>
+                            <td><a class="btn btn-outline-primary" href="/ecommerce/details-product/<%= product.id %>">
+                                    <%= __('Details') %>
+                                </a></td>
+                        </tr>
+                        <% }); %>
+                            <% } %>
+            </tbody>
+        </table>
+    </div>
 </div>
 <%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

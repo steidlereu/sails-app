@@ -5,6 +5,7 @@
 var util = require('util');
 var path = require('path');
 var _ = require('@sailshq/lodash');
+_.defaults = require('merge-defaults');
 
 
 /**
@@ -72,6 +73,8 @@ module.exports = {
    * @type {Dictionary}
    */
   targets: {
+
+    'overridable': '',
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // • e.g. create a folder:
