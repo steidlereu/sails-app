@@ -63,4 +63,10 @@ module.exports.routes = {
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
   'POST  /api/v1/observe-my-session':                 { action: 'observe-my-session', hasSocketFeatures: true },
 
+  // Commerce
+  'GET /ecommerce/add-product': { action: 'ecommerce/view-add-product' },
+  'POST /api/v1/ecommerce/add-product': { action: 'ecommerce/add-product' },
+  'GET /ecommerce/list-product': { action: 'ecommerce/view-list-product' },
+  'GET /ecommerce/details-product/:productId': { action: 'ecommerce/view-details-product' },
+
 };
