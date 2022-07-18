@@ -94,9 +94,9 @@
                         </label>
                         <select class="form-control" id="category" name="category"
                             :class="[formErrors.category ? 'is-invalid' : '']" v-model.trim="formData.category">
-                            <% for(var i=0; i < sails.config.ecommerce.category.length; i++) { %>
+                            <% for(var i=0; i < sails.config.ecommerce.categories.length; i++) { %>
                                 <option>
-                                    <%= sails.config.ecommerce.category[i] %>
+                                    <%= sails.config.ecommerce.categories[i] %>
                                 </option>
                                 <% } %>
                         </select>

@@ -84,25 +84,25 @@ module.exports = {
     },
 
     isbn: {
-      type: 'number',
+      type: 'string',
       minLength: 13,
       maxLength: 13,
     },
 
     upc: {
-      type: 'number',
+      type: 'string',
       minLength: 12,
       maxLength: 12
     },
 
     ean: {
-      type: 'number',
+      type: 'string',
       minLength: 8,
       maxLength: 13
     },
 
     gtin: {
-      type: 'number',
+      type: 'string',
       minLength: 13,
       maxLength: 13
     },
