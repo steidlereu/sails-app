@@ -1,4 +1,4 @@
-# @codespace/sails-generate-ecommerce
+# @steidlereu/sails-generate-ecommerce
 
 A `ecommerce` generator for use with the Sails command-line interface.
 

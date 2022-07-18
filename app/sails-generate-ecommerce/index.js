@@ -80,8 +80,35 @@ module.exports = {
     // • e.g. create a folder:
     // ```
     './api/models/ecommerce': { folder: {} },
-    './api/models/ecommerce/Product.js': { template: 'api/models/ecommerce/Product.js' }
 
+    './api/models/ecommerce/Product.js': { template: 'api/models/ecommerce/Product.js' },
+
+    './api/controllers/ecommerce': { folder: {} },
+
+    './api/controllers/ecommerce/add-product.js': { template: 'api/controllers/ecommerce/add-product.js' },
+    './api/controllers/ecommerce/view-add-product.js': { template: 'api/controllers/ecommerce/view-add-product.js' },
+    './api/controllers/ecommerce/view-details-product.js': { template: 'api/controllers/ecommerce/view-details-product.js' },
+    './api/controllers/ecommerce/view-list-product.js': { template: 'api/controllers/ecommerce/view-list-product.js' },
+
+    './assets/js/pages/ecommerce': { folder: {} },
+    './assets/styles/pages/ecommerce': { folder: {} },
+
+    './assets/js/pages/ecommerce/add-product.page.js': { template: 'assets/js/pages/ecommerce/add-product.page.js' },
+    './assets/js/pages/ecommerce/details-product.page.js': { template: 'assets/js/pages/ecommerce/details-product.page.js' },
+    './assets/js/pages/ecommerce/list-product.page.js': { template: 'assets/js/pages/ecommerce/list-product.page.js' },
+
+    './assets/styles/pages/ecommerce/add-product.less': { template: 'assets/styles/pages/ecommerce/add-product.less' },
+    './assets/styles/pages/ecommerce/details-product.less': { template: 'assets/styles/pages/ecommerce/details-product.less' },
+    './assets/styles/pages/ecommerce/list-product.less': { template: 'assets/styles/pages/ecommerce/list-product.less' },
+
+    './config/ecommerce.js': { template: 'config/ecommerce.js' },
+    './config/example.routes.js': { template: 'config/example.routes.js' },
+
+    './views/pages/ecommerce': { folder: {} },
+
+    './views/pages/ecommerce/add-product.ejs': { template: 'views/pages/ecommerce/add-product.ejs' },
+    './views/pages/ecommerce/details-product.ejs': { template: 'views/pages/ecommerce/details-product.ejs' },
+    './views/pages/ecommerce/list-product.ejs': { template: 'views/pages/ecommerce/list-product.ejs' },
     
     // ```
     //
