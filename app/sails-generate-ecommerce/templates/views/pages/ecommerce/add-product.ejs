@@ -155,13 +155,60 @@
                         <div class="invalid-feedback" v-if="formErrors.isbn"><%= __('Please enter Isbn.') %></div>
                     </div>
                 </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="upc"><%= __('UPC') %></label>
+                        <input class="form-control" id="upc" name="upc" type="number"
+                            :class="[formErrors.upc ? 'is-invalid' : '']" v-model.trim="formData.upc">
+                        <div class="invalid-feedback" v-if="formErrors.upc"><%= __('Please enter UPC.') %></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="ean"><%= __('EAN') %></label>
+                        <input class="form-control" id="ean" name="ean" type="number"
+                            :class="[formErrors.ean ? 'is-invalid' : '']" v-model.trim="formData.ean">
+                        <div class="invalid-feedback" v-if="formErrors.ean"><%= __('Please enter EAN.') %></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="gtin"><%= __('GTiN') %></label>
+                        <input class="form-control" id="gtin" name="gtin" type="number"
+                            :class="[formErrors.gtin ? 'is-invalid' : '']" v-model.trim="formData.gtin">
+                        <div class="invalid-feedback" v-if="formErrors.gtin"><%= __('Please enter GTiN.') %></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="productLink"><%= __('Product Link') %></label>
+                        <input class="form-control" id="productLink" name="productLink" type="url"
+                            :class="[formErrors.productLink ? 'is-invalid' : '']" v-model.trim="formData.productLink">
+                        <div class="invalid-feedback" v-if="formErrors.productLink"><%= __('Please enter Product Link.') %></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="productImageLink"><%= __('Product Image Link') %></label>
+                        <input class="form-control" id="productImageLink" name="productImageLink" type="url"
+                            :class="[formErrors.productImageLink ? 'is-invalid' : '']" v-model.trim="formData.productImageLink">
+                        <div class="invalid-feedback" v-if="formErrors.productImageLink"><%= __('Please enter Product Image Link.') %></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="note"><%= __('Note') %></label>
+                        <input class="form-control" id="note" name="note" type="text"
+                            :class="[formErrors.note ? 'is-invalid' : '']" v-model.trim="formData.note">
+                        <div class="invalid-feedback" v-if="formErrors.note"><%= __('Please enter Note.') %></div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group text-right">
-                        <a class="btn btn-outline-danger" href="/">abbrechen</a>
-                        <ajax-button type="submit" :syncing="syncing" class="btn btn-outline-primary">anlegen
-                        </ajax-button>
+                        <a class="btn btn-outline-danger" href="/"><%= __('cancel') %></a>
+                        <ajax-button type="submit" :syncing="syncing" class="btn btn-outline-primary"><%= __('create') %></ajax-button>
                     </div>
                 </div>
             </div>
