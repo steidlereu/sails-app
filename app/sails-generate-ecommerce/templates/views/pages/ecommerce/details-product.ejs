@@ -1,109 +1,206 @@
 <div id="details-product" v-cloak>
   <div class="container pt-5 pb-5">
-    <h1><%= __('Product - Details') %></h1>
-    <hr/>
+    <h1>
+      <%= __('Product - Details') %>
+    </h1>
+    <hr />
     <div class="row mb-3">
-        <div class="col-sm-6">
-            <h4><%= product.name %> (ID: <%= product.id %>)</h4>
-        </div>
+      <div class="col-sm-6">
+        <h4>
+          <%= product.name %> (ID: <%= product.id %>)
+        </h4>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-sm-6">
+        <img alt="<%= __('Product Image') %>" src="<%= product.productImageLink %>">
+      </div>
     </div>
     <div class="row">
-        <div class="col-3"><%= __('ID') %></div>
-        <div class="col"><strong><%= product.id %></strong></div>
+      <div class="col-3">
+        <%= __('ID') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.id %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Item Name') %></div>
-      <div class="col"><strong><%= product.name %></strong></div>
+      <div class="col-3">
+        <%= __('Item Name') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.name %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Item Description') %></div>
-      <div class="col"><strong><%= product.itemDescription %></strong></div>
+      <div class="col-3">
+        <%= __('Item Description') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.itemDescription %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Item Description') %></div>
-      <div class="col"><strong><%= product.itemDescription %></strong></div>
+      <div class="col-3">
+        <%= __('Item Description') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.itemDescription %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Item Number') %></div>
-      <div class="col"><strong><%= product.itemNumber %></strong></div>
+      <div class="col-3">
+        <%= __('Item Number') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.itemNumber %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Manufacturer') %></div>
-      <div class="col"><strong><%= product.manufacturer %></strong></div>
+      <div class="col-3">
+        <%= __('Manufacturer') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.manufacturer %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Unit') %></div>
-      <div class="col"><strong><%= product.unit %></strong></div>
+      <div class="col-3">
+        <%= __('Unit') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.unit %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Package Size') %></div>
-      <div class="col"><strong><%= product.packageSize %></strong></div>
+      <div class="col-3">
+        <%= __('Package Size') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.packageSize %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Category') %></div>
-      <div class="col"><strong><%= product.category %></strong></div>
+      <div class="col-3">
+        <%= __('Category') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.category %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Restriction') %></div>
-      <div class="col"><strong><%= product.restriction %></strong></div>
+      <div class="col-3">
+        <%= __('Restriction') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.restriction %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Age Restriction') %></div>
-      <div class="col"><strong><%= product.ageRestriction %></strong></div>
+      <div class="col-3">
+        <%= __('Age Restriction') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.ageRestriction %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Price') %></div>
-      <div class="col"><strong><%= product.price %></strong></div>
+      <div class="col-3">
+        <%= __('Price') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.price %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Currency') %></div>
-      <div class="col"><strong><%= product.currency %></strong></div>
+      <div class="col-3">
+        <%= __('Currency') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.currency %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Tax') %></div>
-      <div class="col"><strong><%= product.tax %></strong></div>
+      <div class="col-3">
+        <%= __('Tax') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.tax %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Tax Category') %></div>
-      <div class="col"><strong><%= product.taxCategory %></strong></div>
+      <div class="col-3">
+        <%= __('Tax Category') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.taxCategory %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('ISBN') %></div>
-      <div class="col"><strong><%= product.isbn %></strong></div>
+      <div class="col-3">
+        <%= __('ISBN') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.isbn %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('UPC') %></div>
-      <div class="col"><strong><%= product.upc %></strong></div>
+      <div class="col-3">
+        <%= __('UPC') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.upc %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('EAN') %></div>
-      <div class="col"><strong><%= product.ean %></strong></div>
+      <div class="col-3">
+        <%= __('EAN') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.ean %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('GTin') %></div>
-      <div class="col"><strong><%= product.gtin %></strong></div>
+      <div class="col-3">
+        <%= __('GTin') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.gtin %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Product Informations') %></div>
-      <div class="col"><strong><a href="<%= product.productLink %>"><%= __('Product Informations') %></a></strong></div>
+      <div class="col-3">
+        <%= __('Product Informations') %>
+      </div>
+      <div class="col"><strong><a href="<%= product.productLink %>">
+            <%= __('Product Informations') %>
+          </a></strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Product Image') %></div>
-      <div class="col"><img alt="<%= __('Product Image') %>" src="<%= product.productImageLink %>"></div>
+      <div class="col-3">
+        <%= __('Note') %>
+      </div>
+      <div class="col"><strong>
+          <%= product.note %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Note') %></div>
-      <div class="col"><strong><%= product.note %></strong></div>
+      <div class="col-3">
+        <%= __('Created') %>
+      </div>
+      <div class="col"><strong>
+          <%= (new Date(product.createdAt)).toLocaleDateString() %>
+        </strong></div>
     </div>
     <div class="row">
-      <div class="col-3"><%= __('Created') %></div>
-      <div class="col"><strong><%= (new Date(product.createdAt)).toLocaleDateString() %></strong></div>
+      <div class="col-3">
+        <%= __('Updated') %>
+      </div>
+      <div class="col"><strong>
+          <%= (new Date(product.updatedAt)).toLocaleDateString() %>
+        </strong></div>
     </div>
-    <div class="row">
-      <div class="col-3"><%= __('Updated') %></div>
-      <div class="col"><strong><%= (new Date(product.updatedAt)).toLocaleDateString() %></strong></div>
-    </div>
-    <hr/>
-</div>
+    <hr />
+  </div>
 </div>
 <%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
