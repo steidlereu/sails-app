@@ -97,8 +97,10 @@ module.exports = {
     // • e.g. create a folder:
     // ```
     './api/models/ecommerce': { folder: {} },
-
     './api/models/ecommerce/Product.js': { template: 'api/models/ecommerce/Product.js' },
+
+    './api/helpers/ecommerce': { folder: {} },
+    './api/helpers/ecommerce/product-price.js': { template: 'api/models/ecommerce/product-price.js' },
 
     './api/controllers/ecommerce': { folder: {} },
 

@@ -64,7 +64,7 @@
                             <td>
                                 <%= product.taxCategory %>
                             </td>
-                            <td>{{ calculatePrice(<%= (product.price) %>, <%= product.tax %>) }}</td>
+                            <td><%= sails.helpers.productPrice.with({ price: product.price, tax: product.tax }); %></td>
                             <td>
                                 <%= product.currency %>
                             </td>
