@@ -27,7 +27,7 @@ module.exports = {
     },
     products: {
       collection: 'product',
-      via: 'owners'
+      via: 'shoppingCharts'
     }
 
   },
