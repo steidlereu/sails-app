@@ -12,6 +12,27 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
+    quantity: {
+      type: 'number',
+      required: true,
+    },
+
+    input: {
+      type: 'boolean',
+      required: true,
+    },
+
+    note: {
+      type: 'string',
+      maxLength: 255,
+      required: true,
+    },
+
+    confirmation: {
+      type: 'string',
+      maxLength: 255,
+      required: true,
+    },
 
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

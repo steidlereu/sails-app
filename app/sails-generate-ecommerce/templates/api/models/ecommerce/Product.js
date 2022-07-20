@@ -13,12 +13,6 @@
       //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
       //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
   
-      id: {
-        type: 'number',
-        autoIncrement: true,
-        unique: true,
-      },
-  
       itemName: {
         type: 'string',
         maxLength: 255,
@@ -138,11 +132,8 @@
   
       note: {
         type: 'string',
+        maxLength: 255,
       },
-  
-      createdAt: { type: 'number', autoCreatedAt: true, },
-  
-      updatedAt: { type: 'number', autoUpdatedAt: true, },
   
       //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
       //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
