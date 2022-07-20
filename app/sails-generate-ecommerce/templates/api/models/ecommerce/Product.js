@@ -145,6 +145,10 @@
       //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
       inventory: {
         model:'inventory'
+      },
+      shoppingCharts: {
+        collection: 'shoppingChart',
+        via: 'products'
       }
   
     },

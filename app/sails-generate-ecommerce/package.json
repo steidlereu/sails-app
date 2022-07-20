@@ -18,12 +18,16 @@
   "author": "codespace",
   "license": "MIT",
   "dependencies": {
-    "@sailshq/lodash": "^3.10.3"
+    "@sailshq/lodash": "^3.10.3",
+    "signature_pad": "^4.0.6"
   },
   "devDependencies": {
     "eslint": "3.19.0"
   },
-  "repository": {"type":"git","url":"git://github.com/codespace/sails-generate-ecommerce.git"},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/codespace/sails-generate-ecommerce.git"
+  },
   "sailsGenerator": {
     "type": "ecommerce",
     "behavior": "Implements or overrides `sails generate ecommerce`",
