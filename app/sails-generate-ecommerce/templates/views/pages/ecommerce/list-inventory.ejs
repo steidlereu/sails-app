@@ -1,0 +1,65 @@
+<div id="list-inventory" v-cloak>
+  <div class="container pt-5 pb-5">
+    <h1>
+      <%= __('Inventories') %>
+    </h1>
+    <hr />
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">
+            <%= __('ID') %>
+          </th>
+          <th scope="col">
+            <%= __('Product ID') %>
+          </th>
+          <th scope="col">
+            <%= __('Product Name') %>
+          </th>
+          <th scope="col">
+            <%= __('Quantity') %>
+          </th>
+          <th scope="col">
+            <%= __('last Insert') %>
+          </th>
+          <th scope="col">
+            <%= __('last Removal') %>
+          </th>
+          <th scope="col">
+            <%= __('Actions') %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (inventories.length) { %>
+          <% inventories.forEach(function(inventory){ %>
+            <tr>
+              <td>
+                <%= inventory.id %>
+              </td>
+              <td>
+                <%= inventory.product.id %>
+              </td>
+              <td>
+                <%= inventory.product.itemName %>
+              </td>
+              <td>
+                <%= inventory.quantity %>
+              </td>
+              <td>
+                <%= inventory.lastInsert %>
+              </td>
+              <td>
+                <%= inventory.lastRemovel %>
+              </td>
+              <td><a class="btn btn-outline-primary" href="/ecommerce/details-product/">
+                  <%= __('Details') %>
+                </a></td>
+            </tr>
+            <% }); %>
+              <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

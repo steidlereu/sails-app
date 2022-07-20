@@ -98,6 +98,8 @@ module.exports = {
     // ```
     './api/models/ecommerce': { folder: {} },
     './api/models/ecommerce/Product.js': { template: 'api/models/ecommerce/Product.js' },
+    './api/models/ecommerce/Inventory.js': { template: 'api/models/ecommerce/Inventory.js' },
+    './api/models/ecommerce/InventoryHistory.js': { template: 'api/models/ecommerce/InventoryHistory.js' },
 
     './api/helpers/ecommerce': { folder: {} },
     './api/helpers/ecommerce/product-price.js': { template: 'api/models/ecommerce/product-price.js' },
@@ -109,6 +111,8 @@ module.exports = {
     './api/controllers/ecommerce/view-details-product.js': { template: 'api/controllers/ecommerce/view-details-product.js' },
     './api/controllers/ecommerce/view-list-product.js': { template: 'api/controllers/ecommerce/view-list-product.js' },
 
+    './api/controllers/ecommerce/view-list-inventory.js': { template: 'api/controllers/ecommerce/view-list-inventory.js' },
+
     './assets/js/pages/ecommerce': { folder: {} },
     './assets/styles/pages/ecommerce': { folder: {} },
 
@@ -116,9 +120,13 @@ module.exports = {
     './assets/js/pages/ecommerce/details-product.page.js': { template: 'assets/js/pages/ecommerce/details-product.page.js' },
     './assets/js/pages/ecommerce/list-product.page.js': { template: 'assets/js/pages/ecommerce/list-product.page.js' },
 
+    './assets/js/pages/ecommerce/list-inventory.page.js': { template: 'assets/js/pages/ecommerce/list-inventory.page.js' },
+
     './assets/styles/pages/ecommerce/add-product.less': { template: 'assets/styles/pages/ecommerce/add-product.less' },
     './assets/styles/pages/ecommerce/details-product.less': { template: 'assets/styles/pages/ecommerce/details-product.less' },
     './assets/styles/pages/ecommerce/list-product.less': { template: 'assets/styles/pages/ecommerce/list-product.less' },
+
+    './assets/styles/pages/ecommerce/list-inventory.less': { template: 'assets/styles/pages/ecommerce/list-inventory.less' },
 
     './config/ecommerce.js': { template: 'config/ecommerce.js' },
     './config/example.routes.js': { template: 'config/example.routes.js' },
@@ -128,6 +136,8 @@ module.exports = {
     './views/pages/ecommerce/add-product.ejs': { copy: 'views/pages/ecommerce/add-product.ejs' },
     './views/pages/ecommerce/details-product.ejs': { copy: 'views/pages/ecommerce/details-product.ejs' },
     './views/pages/ecommerce/list-product.ejs': { copy: 'views/pages/ecommerce/list-product.ejs' },
+
+    './views/pages/ecommerce/list-inventory.ejs': { copy: 'views/pages/ecommerce/list-inventory.ejs' },
 
     // Since we cant use the template builtin for this (due to conflicts
     // with the template used by the .ejs file itself), we just do it

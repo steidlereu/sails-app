@@ -16,5 +16,7 @@
     'POST /api/v1/ecommerce/add-product': { action: 'ecommerce/add-product' },
     'GET /ecommerce/list-product': { action: 'ecommerce/view-list-product' },
     'GET /ecommerce/details-product/:productId': { action: 'ecommerce/view-details-product' },
+
+    'GET /ecommerce/list-inventory': { action: 'ecommerce/view-list-inventory' },
   
   };

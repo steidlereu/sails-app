@@ -1,3 +1,5 @@
+const Inventory = require("../../models/ecommerce/Inventory");
+
 module.exports = {
 
 
@@ -142,6 +144,16 @@ module.exports = {
     var createdProduct = await Product.create(inputs).fetch();
 
     if (!createdProduct) { throw 'serverError'; }
+
+    // eslint-disable-next-line no-undef
+    var createdInventory = await Inventory.create({
+      quantity: 0,
+      lastInsert: Date.now(),
+      lastRemovel: Date.now(),
+      product: createdProduct.id
+    }).fetch();
+
+    if (!createdInventory) { throw 'serverError'; }
 
     sails.log('created Product ID is:', createdProduct.id);
 
