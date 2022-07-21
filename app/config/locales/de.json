@@ -70,5 +70,10 @@
 	"Adding Quantity": "Adding Quantity",
 	"Please enter Quantity.": "Please enter Quantity.",
 	"Confirmation": "Confirmation",
-	"Please enter Confirmation.": "Please enter Confirmation."
+	"Please enter Confirmation.": "Please enter Confirmation.",
+	"History": "History",
+	"Inventory History": "Inventory History",
+	"Booker ID": "Booker ID",
+	"Booker Name": "Booker Name",
+	"Confirmation Signature": "Confirmation Signature"
 }

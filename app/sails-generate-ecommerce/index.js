@@ -144,7 +144,7 @@ module.exports = {
     './assets/styles/pages/ecommerce/add-inventory.less': { template: 'assets/styles/pages/ecommerce/add-inventory.less' },
     './assets/styles/pages/ecommerce/remove-inventory.less': { template: 'assets/styles/pages/ecommerce/remove-inventory.less' },
     './assets/styles/pages/ecommerce/list-inventory.less': { template: 'assets/styles/pages/ecommerce/list-inventory.less' },
-    './assets/styles/pages/ecommerce/history-product.less': { template: 'assets/styles/pages/ecommerce/history-product.less' },
+    './assets/styles/pages/ecommerce/history-inventory.less': { template: 'assets/styles/pages/ecommerce/history-inventory.less' },
 
 
     './config/ecommerce.js': { template: 'config/ecommerce.js' },

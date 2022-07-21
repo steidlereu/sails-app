@@ -33,7 +33,11 @@ module.exports = {
     sails.log(inventoryId);
 
     // eslint-disable-next-line no-undef
-    var inventory = await Inventory.findOne({ id: inventoryId }).populate('inventoryHistories');
+    var inventory = await Inventory.findOne({ id: inventoryId }).populate('product').populate('inventoryHistories');
+
+    inventory.inventoryHistories.forEach(inventoryHistory => {
+      inventoryHistory.populate('booker');
+    });
 
     // If no entry was found, respond "notFound" (like calling `res.notFound()`)
     if (!inventory) { throw 'notFound'; }

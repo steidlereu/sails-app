@@ -46,7 +46,8 @@ parasails.registerPage('add-inventory', {
       this.formData.id = id;
     },
     setConfirmation() {
-      this.formData.confirmation = this.signaturePad.toDataURL("image/jpeg");
+      this.formData.confirmation = this.signaturePad.toDataURL();
+      console.log(this.formData.confirmation);
     },
     submittedForm: async function() {
       // Redirect to the account page on success.
