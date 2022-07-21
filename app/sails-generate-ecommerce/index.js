@@ -113,6 +113,10 @@ module.exports = {
     './api/controllers/ecommerce/view-details-product.js': { template: 'api/controllers/ecommerce/view-details-product.js' },
     './api/controllers/ecommerce/view-list-product.js': { template: 'api/controllers/ecommerce/view-list-product.js' },
 
+    './api/controllers/ecommerce/add-inventory.js': { template: 'api/controllers/ecommerce/add-inventory.js' },
+    './api/controllers/ecommerce/remove-inventory.js': { template: 'api/controllers/ecommerce/remove-inventory.js' },
+    './api/controllers/ecommerce/view-add-inventory.js': { template: 'api/controllers/ecommerce/view-add-inventory.js' },
+    './api/controllers/ecommerce/view-remove-inventory.js': { template: 'api/controllers/ecommerce/view-remove-inventory.js' },
     './api/controllers/ecommerce/view-list-inventory.js': { template: 'api/controllers/ecommerce/view-list-inventory.js' },
 
     './assets/js/pages/ecommerce': { folder: {} },
@@ -122,12 +126,16 @@ module.exports = {
     './assets/js/pages/ecommerce/details-product.page.js': { template: 'assets/js/pages/ecommerce/details-product.page.js' },
     './assets/js/pages/ecommerce/list-product.page.js': { template: 'assets/js/pages/ecommerce/list-product.page.js' },
 
+    './assets/js/pages/ecommerce/add-inventory.page.js': { template: 'assets/js/pages/ecommerce/add-inventory.page.js' },
+    './assets/js/pages/ecommerce/remove-inventory.page.js': { template: 'assets/js/pages/ecommerce/remove-inventory.page.js' },
     './assets/js/pages/ecommerce/list-inventory.page.js': { template: 'assets/js/pages/ecommerce/list-inventory.page.js' },
 
     './assets/styles/pages/ecommerce/add-product.less': { template: 'assets/styles/pages/ecommerce/add-product.less' },
     './assets/styles/pages/ecommerce/details-product.less': { template: 'assets/styles/pages/ecommerce/details-product.less' },
     './assets/styles/pages/ecommerce/list-product.less': { template: 'assets/styles/pages/ecommerce/list-product.less' },
 
+    './assets/styles/pages/ecommerce/add-inventory.less': { template: 'assets/styles/pages/ecommerce/add-inventory.less' },
+    './assets/styles/pages/ecommerce/remove-inventory.less': { template: 'assets/styles/pages/ecommerce/remove-inventory.less' },
     './assets/styles/pages/ecommerce/list-inventory.less': { template: 'assets/styles/pages/ecommerce/list-inventory.less' },
 
     './config/ecommerce.js': { template: 'config/ecommerce.js' },
@@ -139,6 +147,8 @@ module.exports = {
     './views/pages/ecommerce/details-product.ejs': { copy: 'views/pages/ecommerce/details-product.ejs' },
     './views/pages/ecommerce/list-product.ejs': { copy: 'views/pages/ecommerce/list-product.ejs' },
 
+    './views/pages/ecommerce/add-inventory.ejs': { copy: 'views/pages/ecommerce/add-inventory.ejs' },
+    './views/pages/ecommerce/remove-inventory.ejs': { copy: 'views/pages/ecommerce/remove-inventory.ejs' },
     './views/pages/ecommerce/list-inventory.ejs': { copy: 'views/pages/ecommerce/list-inventory.ejs' },
 
     // Since we cant use the template builtin for this (due to conflicts
