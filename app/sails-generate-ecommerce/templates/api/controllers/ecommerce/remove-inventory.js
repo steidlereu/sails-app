@@ -29,8 +29,7 @@ module.exports = {
 
   exits: {
     success: {
-      responseType: 'view',
-      viewTemplatePath: '/'
+      responseType: 'ok'
     },
     notFound: {
       description: 'No entry for ID was found in the database.',

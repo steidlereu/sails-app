@@ -126,8 +126,7 @@ module.exports = {
 
   exits: {
     success: {
-      responseType: 'view',
-      viewTemplatePath: '/'
+      responseType: 'ok'
     },
     serverError: {
       description: 'Error creating new product.',

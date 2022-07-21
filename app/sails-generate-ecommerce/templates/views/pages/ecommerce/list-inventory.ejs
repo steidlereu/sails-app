@@ -47,10 +47,10 @@
                 <%= inventory.quantity %>
               </td>
               <td>
-                <%= inventory.lastInsert %>
+                <%= (new Date(inventory.lastInsert)).toLocaleDateString() %>
               </td>
               <td>
-                <%= inventory.lastRemovel %>
+                <%= (new Date(inventory.lastRemovel)).toLocaleDateString() %>
               </td>
               <td>
                 <a class="btn btn-outline-primary" href="/ecommerce/add-inventory/<%= inventory.id %>">
