@@ -18,5 +18,6 @@
     'GET /ecommerce/details-product/:productId': { action: 'ecommerce/view-details-product' },
 
     'GET /ecommerce/list-inventory': { action: 'ecommerce/view-list-inventory' },
+    'GET /ecommerce/add-inventory/:inventoryId': { action: 'ecommerce/view-add-inventory' },
   
   };

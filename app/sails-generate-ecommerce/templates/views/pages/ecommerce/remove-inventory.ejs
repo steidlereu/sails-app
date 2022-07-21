@@ -1,0 +1,95 @@
+<div id="remove-inventory" v-cloak>
+  <div class="container pt-5 pb-5">
+    <h1>
+      <%= __('Remove Inventory') %>
+    </h1>
+    <hr />
+    <div class="row">
+      <div class="col-3">
+        <%= __('ID') %>
+      </div>
+      <div class="col"><strong>
+          <%= inventory.id %>
+        </strong></div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <%= __('Product ID') %>
+      </div>
+      <div class="col"><strong>
+          <%= inventory.product.id %>
+        </strong></div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <%= __('Product Name') %>
+      </div>
+      <div class="col"><strong>
+          <%= inventory.product.name %>
+        </strong></div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <%= __('Current quantity') %>
+      </div>
+      <div class="col"><strong>
+          <%= inventory.quantity %>
+        </strong></div>
+    </div>
+    <hr />
+    <ajax-form action="removeInventory" :syncing.sync="syncing" :cloud-error.sync="cloudError" :form-data="formData"
+      :form-rules="formRules" :form-errors.sync="formErrors" @submitted="submittedForm()">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="quantity">
+              <%= __('Removing Quantity') %>
+            </label>
+            <input class="form-control" id="quantity" name="quantity" type="number"
+              :class="[formErrors.quantity ? 'is-invalid' : '']" v-model.trim="formData.quantity" focus-first>
+            <div class="invalid-feedback" v-if="formErrors.quantity">
+              <%= __('Please enter Quantity.') %>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="note">
+              <%= __('Note') %>
+            </label>
+            <input class="form-control" id="note" name="note" type="text"
+              :class="[formErrors.note ? 'is-invalid' : '']" v-model.trim="formData.note">
+            <div class="invalid-feedback" v-if="formErrors.note">
+              <%= __('Please enter Note.') %>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="confirmation">
+              <%= __('Confirmation') %>
+            </label>
+            <input class="form-control" id="confirmation" name="confirmation" type="text"
+              :class="[formErrors.confirmation ? 'is-invalid' : '']" v-model.trim="formData.confirmation">
+            <div class="invalid-feedback" v-if="formErrors.confirmation">
+              <%= __('Please enter Confirmation.') %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group text-right">
+            <a class="btn btn-outline-danger" href="/">
+              <%= __('cancel') %>
+            </a>
+            <ajax-button type="submit" :syncing="syncing" class="btn btn-outline-primary">
+              <%= __('remove') %>
+            </ajax-button>
+          </div>
+        </div>
+      </div>
+    </ajax-form>
+  </div>
+</div>
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

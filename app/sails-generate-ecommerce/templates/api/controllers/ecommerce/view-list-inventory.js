@@ -23,7 +23,6 @@ module.exports = {
     // eslint-disable-next-line no-undef
     var inventories = await Inventory.find().populate('product');
 
-
     // Respond with view.
     return {
       inventories: inventories

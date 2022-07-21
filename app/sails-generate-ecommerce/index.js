@@ -100,6 +100,8 @@ module.exports = {
     './api/models/ecommerce/Product.js': { template: 'api/models/ecommerce/Product.js' },
     './api/models/ecommerce/Inventory.js': { template: 'api/models/ecommerce/Inventory.js' },
     './api/models/ecommerce/InventoryHistory.js': { template: 'api/models/ecommerce/InventoryHistory.js' },
+    './api/models/ecommerce/Order.js': { template: 'api/models/ecommerce/Order.js' },
+    './api/models/ecommerce/ShoppingCart.js': { template: 'api/models/ecommerce/ShoppingCart.js' },
 
     './api/helpers/ecommerce': { folder: {} },
     './api/helpers/ecommerce/product-price.js': { template: 'api/models/ecommerce/product-price.js' },

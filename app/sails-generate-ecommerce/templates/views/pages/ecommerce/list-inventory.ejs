@@ -52,9 +52,15 @@
               <td>
                 <%= inventory.lastRemovel %>
               </td>
-              <td><a class="btn btn-outline-primary" href="/ecommerce/details-product/">
-                  <%= __('Details') %>
-                </a></td>
+              <td>
+                <a class="btn btn-outline-primary" href="/ecommerce/add-inventory/<%= inventory.id %>">
+                  <%= __('add') %>
+                </a>
+                <br>
+                <a class="btn btn-outline-primary" href="/ecommerce/remove-inventory/<%= inventory.id %>">
+                  <%= __('remove') %>
+                </a>
+              </td>
             </tr>
             <% }); %>
               <% } %>
