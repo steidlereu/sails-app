@@ -29,8 +29,9 @@ module.exports = {
     },
 
     confirmation: {
-      type: 'string',
+      type: 'ref',
       required: true,
+      columnType: 'bytea',
     },
 
 
