@@ -103,8 +103,8 @@ module.exports = {
     './api/models/ecommerce/Order.js': { template: 'api/models/ecommerce/Order.js' },
     './api/models/ecommerce/ShoppingCart.js': { template: 'api/models/ecommerce/ShoppingCart.js' },
 
-    './api/helpers/ecommerce': { folder: {} },
-    './api/helpers/ecommerce/product-price.js': { template: 'api/models/ecommerce/product-price.js' },
+    //'./api/helpers/ecommerce': { folder: {} },
+    // './api/helpers/ecommerce/product-price.js': { template: 'api/helpers/ecommerce/product-price.js' },
 
     './api/controllers/ecommerce': { folder: {} },
 

@@ -1,5 +1,3 @@
-const Inventory = require("../../models/ecommerce/Inventory");
-
 module.exports = {
 
 

@@ -56,5 +56,19 @@
 	"Product Informations": "Product Informations",
 	"Product Image": "Product Image",
 	"Created": "Created",
-	"Updated": "Updated"
+	"Updated": "Updated",
+	"Inventories": "Inventories",
+	"Product ID": "Product ID",
+	"Product Name": "Product Name",
+	"Quantity": "Quantity",
+	"last Insert": "last Insert",
+	"last Removal": "last Removal",
+	"add": "add",
+	"remove": "remove",
+	"Add Inventory": "Add Inventory",
+	"Current quantity": "Current quantity",
+	"Adding Quantity": "Adding Quantity",
+	"Please enter Quantity.": "Please enter Quantity.",
+	"Confirmation": "Confirmation",
+	"Please enter Confirmation.": "Please enter Confirmation."
 }
