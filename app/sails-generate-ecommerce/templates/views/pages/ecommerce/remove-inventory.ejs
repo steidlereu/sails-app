@@ -39,6 +39,8 @@
     <hr />
     <ajax-form action="removeInventory" :syncing.sync="syncing" :cloud-error.sync="cloudError" :form-data="formData"
       :form-rules="formRules" :form-errors.sync="formErrors" @submitted="submittedForm()">
+      {{ setId(<%= inventory.id %>) }}
+      <input type="hidden" class="form-control" id="id" name="id" v-model="formData.id">
       <div class="row">
         <div class="col-sm-6">
           <div class="form-group">

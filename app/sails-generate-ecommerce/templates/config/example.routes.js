@@ -19,5 +19,8 @@
 
     'GET /ecommerce/list-inventory': { action: 'ecommerce/view-list-inventory' },
     'GET /ecommerce/add-inventory/:inventoryId': { action: 'ecommerce/view-add-inventory' },
-  
+    'GET /ecommerce/remove-inventory/:inventoryId': { action: 'ecommerce/view-remove-inventory' },
+
+    'POST /api/v1/ecommerce/add-inventory': { action: 'ecommerce/add-inventory' },
+    'DELETE /api/v1/ecommerce/remove-inventory': { action: 'ecommerce/remove-inventory' },
   };
