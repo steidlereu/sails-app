@@ -1,7 +1,99 @@
 <div id="history-inventory" v-cloak>
-
-  <h1>TODO: Implement this page.</h1>
-  <p>(See also <em>assets/styles/pages/ecommerce/history-inventory.less</em>, <em>assets/js/pages/ecommerce/history-inventory.page.js</em>, and <em>api/controllers/ecommerce/view-history-inventory.js</em>.)</p>
-
+  <div class="container pt-5 pb-5">
+    <h1>
+      <%= __('Inventory History') %>
+    </h1>
+    <hr />
+    <div class="row">
+      <div class="col-3">
+        <%= __('ID') %>
+      </div>
+      <div class="col"><strong>
+          <%= inventory.id %>
+        </strong></div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <%= __('Product ID') %>
+      </div>
+      <div class="col">
+        <strong>
+          <a href="/ecommerce/details-product/<%= inventory.product.id %>"><%= inventory.product.id %></a>
+        </strong>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <%= __('Product Name') %>
+      </div>
+      <div class="col"><strong>
+          <%= inventory.product.itemName %>
+        </strong></div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <%= __('Current quantity') %>
+      </div>
+      <div class="col"><strong>
+          <%= inventory.quantity %>
+        </strong></div>
+    </div>
+    <hr />
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">
+            <%= __('ID') %>
+          </th>
+          <th scope="col">
+            <%= __('Quantity') %>
+          </th>
+          <th scope="col">
+            <%= __('Booker ID') %>
+          </th>
+          <th scope="col">
+            <%= __('Booker Name') %>
+          </th>
+          <th scope="col">
+            <%= __('Confirmation Signature') %>
+          </th>
+          <th scope="col">
+            <%= __('Note') %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (inventory.inventoryHistories.length) { %>
+          <% inventory.inventoryHistories.forEach(function(inventoryHistory){ %>
+            <tr>
+              <td>
+                <%= inventoryHistory.id %>
+              </td>
+              <td>
+                <% if (inventoryHistory.input) { %>
+                  + <%= inventoryHistory.quantity %>
+                <% } %>
+                <% if (!inventoryHistory.input) { %>
+                  - <%= inventoryHistory.quantity %>
+                <% } %>
+              </td>
+              <td>
+                <%= inventoryHistory.booker.id %>
+              </td>
+              <td>
+                <%= inventoryHistory.booker.fullName %>
+              </td>
+              <td>
+                <img alt="confirmation signature" src="<%= inventoryHistory.confirmation %>">
+              </td>
+              <td>
+                <%= inventoryHistory.note %>
+              </td>
+            </tr>
+            <% }); %>
+              <% } %>
+      </tbody>
+    </table>
+  </div>
 </div>
 <%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

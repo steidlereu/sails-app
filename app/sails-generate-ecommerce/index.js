@@ -83,6 +83,9 @@ module.exports = {
     console.log(' (4)  Last but not least, since some of the above are backend changes,');
     console.log('      don\'t forget to re-lift the server before testing!');
     console.log();
+    console.log(' (5)  Also dont forget to rebuld the cloud sdk,');
+    console.log('      `sails run rebuild-cloud-sdk`');
+    console.log();
     return done();
   },
 
@@ -118,6 +121,7 @@ module.exports = {
     './api/controllers/ecommerce/view-add-inventory.js': { template: 'api/controllers/ecommerce/view-add-inventory.js' },
     './api/controllers/ecommerce/view-remove-inventory.js': { template: 'api/controllers/ecommerce/view-remove-inventory.js' },
     './api/controllers/ecommerce/view-list-inventory.js': { template: 'api/controllers/ecommerce/view-list-inventory.js' },
+    './api/controllers/ecommerce/view-history-inventory.js': { template: 'api/controllers/ecommerce/view-history-inventory.js' },
 
     './assets/js/pages/ecommerce': { folder: {} },
     './assets/styles/pages/ecommerce': { folder: {} },
@@ -131,14 +135,17 @@ module.exports = {
     './assets/js/pages/ecommerce/add-inventory.page.js': { template: 'assets/js/pages/ecommerce/add-inventory.page.js' },
     './assets/js/pages/ecommerce/remove-inventory.page.js': { template: 'assets/js/pages/ecommerce/remove-inventory.page.js' },
     './assets/js/pages/ecommerce/list-inventory.page.js': { template: 'assets/js/pages/ecommerce/list-inventory.page.js' },
+    './assets/js/pages/ecommerce/history-inventory.page.js': { template: 'assets/js/pages/ecommerce/history-inventory.page.js' },
 
     './assets/styles/pages/ecommerce/add-product.less': { template: 'assets/styles/pages/ecommerce/add-product.less' },
     './assets/styles/pages/ecommerce/details-product.less': { template: 'assets/styles/pages/ecommerce/details-product.less' },
     './assets/styles/pages/ecommerce/list-product.less': { template: 'assets/styles/pages/ecommerce/list-product.less' },
-
+    
     './assets/styles/pages/ecommerce/add-inventory.less': { template: 'assets/styles/pages/ecommerce/add-inventory.less' },
     './assets/styles/pages/ecommerce/remove-inventory.less': { template: 'assets/styles/pages/ecommerce/remove-inventory.less' },
     './assets/styles/pages/ecommerce/list-inventory.less': { template: 'assets/styles/pages/ecommerce/list-inventory.less' },
+    './assets/styles/pages/ecommerce/history-product.less': { template: 'assets/styles/pages/ecommerce/history-product.less' },
+
 
     './config/ecommerce.js': { template: 'config/ecommerce.js' },
     './config/example.routes.js': { template: 'config/example.routes.js' },
@@ -152,6 +159,8 @@ module.exports = {
     './views/pages/ecommerce/add-inventory.ejs': { copy: 'views/pages/ecommerce/add-inventory.ejs' },
     './views/pages/ecommerce/remove-inventory.ejs': { copy: 'views/pages/ecommerce/remove-inventory.ejs' },
     './views/pages/ecommerce/list-inventory.ejs': { copy: 'views/pages/ecommerce/list-inventory.ejs' },
+    './views/pages/ecommerce/history-inventory.ejs': { copy: 'views/pages/ecommerce/history-inventory.ejs' },
+
 
     // Since we cant use the template builtin for this (due to conflicts
     // with the template used by the .ejs file itself), we just do it

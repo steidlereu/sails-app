@@ -38,8 +38,6 @@ module.exports = {
     // If no entry was found, respond "notFound" (like calling `res.notFound()`)
     if (!inventory) { throw 'notFound'; }
 
-    var inventoryHistory = await InventoryHistory
-
     // Display a view.
     return {
       inventory: inventory
