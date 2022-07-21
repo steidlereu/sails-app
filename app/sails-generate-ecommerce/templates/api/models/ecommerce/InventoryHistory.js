@@ -30,7 +30,6 @@ module.exports = {
 
     confirmation: {
       type: 'string',
-      maxLength: 255,
       required: true,
     },
 

@@ -23,7 +23,6 @@ module.exports = {
     },
     confirmation: {
       type: 'string',
-      maxLength: 255,
       required: true,
     },
   },
@@ -62,7 +61,7 @@ module.exports = {
         lastRemovel: Date.now()
       });
 
-    await Product.create({
+    await InventoryHistory.create({
       quantity: inputs.quantity,
       input: false,
       note: inputs.note,

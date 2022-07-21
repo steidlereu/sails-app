@@ -23,7 +23,6 @@ module.exports = {
     },
     confirmation: {
       type: 'string',
-      maxLength: 255,
       required: true,
     },
   },
@@ -57,7 +56,7 @@ module.exports = {
         lastInsert: Date.now()
       });
 
-    await Product.create({
+    await InventoryHistory.create({
       quantity: inputs.quantity,
       input: true,
       note: inputs.note,

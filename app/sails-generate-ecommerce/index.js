@@ -122,7 +122,7 @@ module.exports = {
     './assets/js/pages/ecommerce': { folder: {} },
     './assets/styles/pages/ecommerce': { folder: {} },
 
-    './assets/dependencies/signature_pad.umd.min.js': { template: 'assets/dependencies/signature_pad.umd.min.js' },
+    './assets/dependencies/signature_pad.umd.min.js': { copy: 'assets/dependencies/signature_pad.umd.min.js' },
 
     './assets/js/pages/ecommerce/add-product.page.js': { template: 'assets/js/pages/ecommerce/add-product.page.js' },
     './assets/js/pages/ecommerce/details-product.page.js': { template: 'assets/js/pages/ecommerce/details-product.page.js' },

@@ -22,6 +22,8 @@ parasails.registerPage('remove-inventory', {
 
     // Server error state for the form
     cloudError: '',
+
+    signaturePad: null,
   },
 
   //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
@@ -31,7 +33,8 @@ parasails.registerPage('remove-inventory', {
     //…
   },
   mounted: async function() {
-    //…
+    const canvas = document.querySelector("canvas");
+    this.signaturePad = new SignaturePad(canvas);
   },
 
   //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
@@ -40,6 +43,9 @@ parasails.registerPage('remove-inventory', {
   methods: {
     setId(id) {
       this.formData.id = id;
+    },
+    setConfirmation() {
+      this.formData.confirmation = this.signaturePad.toDataURL("image/jpeg");
     },
     submittedForm: async function() {
       // Redirect to the account page on success.

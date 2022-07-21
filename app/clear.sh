@@ -8,3 +8,4 @@ rm -rf ./assets/styles/pages/ecommerce
 rm -rf ./views/pages/ecommerce
 rm -rf ./config/ecommerce.js
 rm -rf ./config/example.routes.js
+rm assets/dependencies/signature_pad.umd.min.js

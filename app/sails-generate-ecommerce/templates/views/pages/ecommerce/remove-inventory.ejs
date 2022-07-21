@@ -73,10 +73,13 @@
             <label for="confirmation">
               <%= __('Confirmation') %>
             </label>
-            <input class="form-control" id="confirmation" name="confirmation" type="text"
+            <input class="form-control" id="confirmation" name="confirmation" type="hidden"
               :class="[formErrors.confirmation ? 'is-invalid' : '']" v-model.trim="formData.confirmation">
             <div class="invalid-feedback" v-if="formErrors.confirmation">
               <%= __('Please enter Confirmation.') %>
+            </div>
+            <div style="border: 1px solid #ced4da;border-radius: 0.25rem;display: inline-block;">
+              <canvas></canvas>
             </div>
           </div>
         </div>
@@ -87,7 +90,7 @@
             <a class="btn btn-outline-danger" href="/">
               <%= __('cancel') %>
             </a>
-            <ajax-button type="submit" :syncing="syncing" class="btn btn-outline-primary">
+            <ajax-button type="submit" :syncing="syncing" class="btn btn-outline-primary" @click="setConfirmation()">
               <%= __('remove') %>
             </ajax-button>
           </div>

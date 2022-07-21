@@ -45,6 +45,9 @@ parasails.registerPage('add-inventory', {
     setId(id) {
       this.formData.id = id;
     },
+    setConfirmation() {
+      this.formData.confirmation = this.signaturePad.toDataURL("image/jpeg");
+    },
     submittedForm: async function() {
       // Redirect to the account page on success.
       // > (Note that we re-enable the syncing state here.  This is on purpose--
