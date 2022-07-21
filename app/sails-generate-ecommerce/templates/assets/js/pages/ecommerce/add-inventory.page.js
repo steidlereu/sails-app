@@ -22,16 +22,20 @@ parasails.registerPage('add-inventory', {
 
     // Server error state for the form
     cloudError: '',
+
+    signaturePad: null,
   },
 
   //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
   //  ║  ║╠╣ ║╣ ║  ╚╦╝║  ║  ║╣
   //  ╩═╝╩╚  ╚═╝╚═╝ ╩ ╚═╝╩═╝╚═╝
   beforeMount: function() {
+
     //…
   },
   mounted: async function() {
-    //…
+    const canvas = document.querySelector("canvas");
+    this.signaturePad = new SignaturePad(canvas);
   },
 
   //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
